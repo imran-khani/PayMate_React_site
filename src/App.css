@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* make custom layer class for paragraph with gray color and font size 20px */
+
+
+.paragraph {
+  @apply text-base font-normal text-gray-400;
+}
