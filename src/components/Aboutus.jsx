@@ -34,7 +34,9 @@ const Aboutus = () => {
                   </div>
                 );
               })}
-              <div></div>
+              <button className=" ml-10 mt-3 rounded-md bg-indigo-500 p-2 text-white">
+                Learn More
+              </button>
             </div>
           </div>
         </div>
@@ -62,7 +64,9 @@ const Aboutus = () => {
                   </div>
                 );
               })}
-              <div></div>
+              <button className=" ml-5 mt-3 rounded-md bg-indigo-500 p-2 text-white">
+                Learn More
+              </button>
             </div>
             <div className="flex justify-center">
               <Lottie
