@@ -28,7 +28,7 @@ const Contact = () => {
               />
             </div>
             <div>
-              <form>
+              <form onSubmit={(e) => e.preventDefault()}>
                 <div className="flex flex-col items-center gap-5 md:flex-row">
                   <TextField
                     id="standard-basic"
@@ -68,8 +68,23 @@ const Contact = () => {
                   label="Enter Your Message"
                   variant="standard"
                   placeholder="Enter Your Message"
-                  className="mt-10 w-full border-2 border-gray-200 p-5 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-gray-200 "
+                  className="mt-10 w-full border-2 border-gray-200 p-5 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-gray-200  "
                 />
+                {/* checkbox for agreement */}
+                <div className="mt-5 flex items-center ">
+                  <input
+                    type="checkbox"
+                    className="h-4 w-4 cursor-pointer"
+                    id="agreement"
+                  />
+                  <label htmlFor="agreement" className="ml-3 cursor-pointer">
+                    I agree to the terms and conditions and privacy policy of
+                    the website.
+                  </label>
+                </div>
+                <button className="mt-10 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
+                  Submit
+                </button>
               </form>
             </div>
           </div>
