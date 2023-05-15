@@ -14,11 +14,37 @@ const Contact = () => {
     message: "",
   });
 
-      const postData = (e) => {
-        const name = e.target.name;
-        const value = e.target.value;
-        setUserData({ ...userData, [name]: value });
-      };
+  const postData = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setUserData({ ...userData, [name]: value });
+  };
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+  const submitData = async () => {
+    const url =
+      "https://react-29149-default-rtdb.firebaseio.com/userDataRecords.json";
+    const { firstName, lastName, email, phone, address, message } = userData;
+    try {
+      await fetch(url, {
+        ...options,
+        body: JSON.stringify({
+          firstName,
+          lastName,
+          email,
+          phone,
+          address,
+          message,
+        }),
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <>
@@ -115,8 +141,9 @@ const Contact = () => {
                     the website.
                   </label>
                 </div>
-                <button className="mt-10 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
-                onClick={submitData}
+                <button
+                  className="mt-10 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
+                  onClick={submitData}
                 >
                   Submit
                 </button>
