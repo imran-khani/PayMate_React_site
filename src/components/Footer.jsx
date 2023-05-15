@@ -93,7 +93,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <span className="text-white ">copyright @imran</span>
+        <p className="text-gray-400 text-center">Made with ❤️ by Imran Khan</p>
       </section>
     </>
   );
