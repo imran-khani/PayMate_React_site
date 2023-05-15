@@ -7,6 +7,7 @@ import Aboutus from "./components/Aboutus";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Error from "./components/Error";
 
 function App() {
   return (
