@@ -5,9 +5,8 @@ import Header from "../components/Header";
 import HowItWork from "../components/HowItWork";
 import Aboutus from "../components/Aboutus";
 import Services from "../components/Services";
-import Contact from "../components/Contact";
+import Contact from "./Contactus";
 import Footer from "../components/Footer";
-import Error from "../components/Error";
 
 function Home() {
   return (
