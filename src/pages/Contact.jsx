@@ -3,6 +3,7 @@ import Contactus from "../components/Contactus";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 const Contact = () => {
+
   return (
     <>
       <Navbar />
